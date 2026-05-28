@@ -466,13 +466,95 @@ var = 123
 # del phonebook["Adam"]
 # print(phonebook)
 
-pol_eng_dictionry = {"kwiat": "flower"}
+# pol_eng_dictionry = {"kwiat": "flower"}
 
-pol_eng_dictionry.update(
-    {
-        "gleba": "soil"
-    })
-print(pol_eng_dictionry)
+# pol_eng_dictionry.update(
+#     {
+#         "gleba": "soil"
+#     })
+# print(pol_eng_dictionry)
 
-pol_eng_dictionry.popitem()
-print(pol_eng_dictionry)
+# pol_eng_dictionry.popitem()
+# print(pol_eng_dictionry)
+
+# pol_eng_dictionary = {
+#     "zamek": "castle",
+#     "woda": "water",
+#     "gleba": "soil"
+#     }
+# pol_eng_dictionary["zamek"] = "lock"
+# item = pol_eng_dictionary["zamek"]
+# print(item) 
+
+# pol_eng_dictionary = {
+#     "zamek": "castle",
+#     "woda": "water",
+#     "gleba": "soil"
+#     }
+# if "zamek" in pol_eng_dictionary:
+#     print("Yes!'zamek' is in the dictionary.")
+# else:
+#     print("No!'zamek' is not in the dictionary.")
+
+
+# students = {}
+
+# while True:
+#     name = input("Enter student name")
+#     if name == " ":
+#         break   
+#     grade = input("Enter student grade")
+#     students[name] = grade
+#     print(students)
+# score = input("Enter student name to get grade")
+# if score in students:
+#     print(score, "->", students[score])
+# else:
+#     print("Student not found.")
+
+# students = {}
+
+# while True:
+#     name = input("Enter student name: ")
+#     if name == " ":
+#         break   
+#     score = int(input(f"Enter {name}'s score: "))
+#     if score not in range(1,11):
+#         break
+#     if name in students:
+#         students[name] += (score, )
+#     else:
+#         students[name] = (score, )
+        
+#         for mark in students:
+#             print(mark, "->", students[mark])
+#             input("Enter student name to get score: ")
+#             name = input("Enter student name: ")
+#             if name in students:
+#                 print(name, "->", students[name])
+#             else:
+#                 print("Student not found.")
+
+
+# students = {}
+
+# while True:
+#     name = input("Enter student name: ")
+#     if name == "":
+#         break   
+#     score = int(input(f"Enter {name}'s score:"))
+#     if score not in range(1,11):
+#         break
+#     if name in students:
+#         students[name] += (score, )
+#     else:
+#         students[name] = (score, )
+
+
+# print(students)
+# for name, marks in students.items():
+#     sum = 0
+#     for mark in marks:
+#         sum += mark
+#         print(name, "->", sum / len(marks))
+
