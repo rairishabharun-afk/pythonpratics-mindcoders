@@ -1,0 +1,73 @@
+HISTORY_FILE = "history.txt"
+
+
+def show_history():
+    try:
+        file = open(HISTORY_FILE, 'r')
+        lines = file.readlines()
+
+        if len(lines) == 0:
+            print("No history found!")
+        else:
+            print("\n--- Calculation History ---")
+            for line in reversed(lines):
+                print(line.strip())
+
+        file.close()
+
+    except FileNotFoundError:
+        print("No history file found!")
+
+
+def clear_history():
+    file = open(HISTORY_FILE, 'w')
+    file.close()
+    print("History cleared.")
+
+
+def save_to_history(equation, result):
+    file = open(HISTORY_FILE, 'a')
+    file.write(equation + " = " + str(result) + "\n")
+    file.close()
+
+
+def calculate(user_input):
+    try:
+        result = eval(user_input)
+        print("Result:", result)
+
+        save_to_history(user_input, result)
+
+    except Exception as e:
+        print("Error:", e)
+
+
+def main():
+    while True:
+        print("\n===== Simple Calculator =====")
+        print("1. Calculate")
+        print("2. Show History")
+        print("3. Clear History")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            equation = input("Enter equation: ")
+            calculate(equation)
+
+        elif choice == '2':
+            show_history()
+
+        elif choice == '3':
+            clear_history()
+
+        elif choice == '4':
+            print("Exiting calculator...")
+            break
+
+        else:
+            print("Invalid choice! Try again.")
+
+
+    main()

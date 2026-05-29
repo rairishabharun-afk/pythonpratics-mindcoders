@@ -40,21 +40,6 @@
 # print(type(x))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # for temp in range (1,7):
 #     print(str(temp)*temp)
 
@@ -558,3 +543,48 @@ var = 123
 #         sum += mark
 #         print(name, "->", sum / len(marks))
 
+# class ThisIsMyFirstClass:
+#     name = "Rishuu"
+#     age = 21
+
+#     def getName(self):
+#        print(self.name)
+       
+
+# first_object = ThisIsMyFirstClass()
+# print(first_object)
+
+# first_object.getName()
+# print(first_object.name)
+
+class Student:
+    def __init__(self, name, age, grades, gender):
+        self.name = name
+        self.age = age
+        self.grades = grades
+        self.gender = gender
+
+  
+    def printDetails(self):
+        print("name:", self.name)
+        print("age:", self.age)
+        print("grades:", self.grades)
+        print("gender:", self.gender)
+    
+        
+
+rishuu = Student("Rishuu", 21, "A", "Male")
+print(rishuu)
+
+# rishuu.name = "Rishuu"
+# rishuu.age = 21 
+# rishuu.grades = "A"
+# rishuu.gender = "Male"
+
+rishuu.printDetails()  
+
+# print(rishuu.name)
+# print(rishuu.age)
+# print(rishuu.grades)
+# print(rishuu.gender)
+    
