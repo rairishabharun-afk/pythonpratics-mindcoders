@@ -543,6 +543,7 @@ var = 123
 #         sum += mark
 #         print(name, "->", sum / len(marks))
 
+
 # class ThisIsMyFirstClass:
 #     name = "Rishuu"
 #     age = 21
@@ -554,37 +555,541 @@ var = 123
 # first_object = ThisIsMyFirstClass()
 # print(first_object)
 
-# first_object.getName()
-# print(first_object.name)
+# # first_object.getName()
+# # print(first_object.name)
 
-class Student:
-    def __init__(self, name, age, grades, gender):
-        self.name = name
-        self.age = age
-        self.grades = grades
-        self.gender = gender
+# class Student:
+#     def __init__(self, name, age, grades, gender):
+#         self.name = name
+#         self.age = age
+#         self.grades = grades
+#         self.gender = gender
 
   
-    def printDetails(self):
-        print("name:", self.name)
-        print("age:", self.age)
-        print("grades:", self.grades)
-        print("gender:", self.gender)
+#     def printDetails(self):
+#         print("name:", self.name)
+#         print("age:", self.age)
+#         print("grades:", self.grades)
+#         print("gender:", self.gender)
     
         
 
-rishuu = Student("Rishuu", 21, "A", "Male")
-print(rishuu)
+# rishuu = Student("Rishuu", 21, "A", "Male")
+# print(rishuu)
 
-# rishuu.name = "Rishuu"
-# rishuu.age = 21 
-# rishuu.grades = "A"
-# rishuu.gender = "Male"
+# # rishuu.name = "Rishuu"
+# # rishuu.age = 21 
+# # rishuu.grades = "A"
+# # rishuu.gender = "Male"
 
-rishuu.printDetails()  
+# rishuu.printDetails()  
 
-# print(rishuu.name)
-# print(rishuu.age)
-# print(rishuu.grades)
-# print(rishuu.gender)
+# # print(rishuu.name)
+# # print(rishuu.age)
+# # print(rishuu.grades)
+# # # print(rishuu.gender)
     
+
+# class ExampleClass:
+#     def __init__(self, val = 1):
+#         self.first = val
+
+#     def set_second(self, val):
+#         self.second = val
+
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_2.set_second(3)
+# example_object_3 = ExampleClass(4)
+# example_object_3.third = 5
+
+# print(example_object_1)
+
+# print(example_object_1.__dict__)
+# print(example_object_2.__dict__)
+# print(example_object_3.__dict__)
+
+'''use super class and super method '''
+class super:
+    def __init__(self,name):
+        self.name = name
+    def __str__(self): #end user also use repr method but str is for internal use 
+        return "my name is " +self.name+"."
+class Sub(super):
+    def __init__(self,name):
+        super.__init__(self,name)
+
+obj = Sub("Andy")
+print(obj)
+print(obj.__dict__)#also custamise the dict format #use for explaining 
+    
+'''multiple inheritance'''
+
+# class SuperA:
+#     var_a = 10
+#     def fun_a(self):
+#         return 11
+# class SuperB:
+#     var_b = 20
+#     def fun_b(self):
+#         return 21
+    
+# class Sub(SuperA,SuperB):
+#     pass
+
+# obj = Sub()
+
+# print(obj.var_a,obj.fun_a())
+# print(obj.var_b,obj.fun_b())
+
+# '''multilevel inheritance'''
+# # in python it checks from bottom-to-top
+# class Level1: 
+#     var = 100
+#     def fun(self):
+#         return 101
+# class Level2(Level1):
+#     var = 200
+#     def fun(self):
+#         return 201
+    
+# class Level3(Level2):
+#    pass
+   
+    # var = 303
+    # def fun(self):
+    #     return 333
+    
+
+# obj = Level3()
+# print(obj.var,obj.fun())
+
+
+#here about on same level left right
+'''multiple inheritance'''
+
+# class Left:
+#     var = "L"
+#     var_left="LL"
+#     def fun(self):
+#         return "left"
+# class Right:
+#     var= "R"
+#     var_right="RR"
+#     def fun(self):
+#         return "right"
+# class Sub(Right,Left): #(left,right)
+#     pass
+
+# obj = Sub()
+# print(obj.var,obj.var_left,obj.var_right,obj.fun())
+
+# MRO method resolution order precidence and order both in multilevel and multiple inheritance
+
+'''polymorphism one name many forms'''
+
+# class One: 
+#     def do_it(self):
+#         print("do it from one")
+
+#     def doanything(self):
+#         self.do_it()
+
+# class Two(One):
+#     def do_it(self):
+#         print("do_it  from Two")
+
+#  class Three(Two):
+#        super.do_it(self):
+#        print():  #try with super
+
+# one = One()
+# two = Two()
+# one.doanything()
+# two.doanything()   
+
+
+# def reciprocal(n):
+#     try:
+#         n = 1/n
+#     except ZeroDivisionError:
+#         print("ZeroDivisionError")
+#         return n
+#     else:
+#         print("evenrything is fine")
+#         return
+# print("-----------------")
+# print("reciprocal(2)",reciprocal(2))
+
+# print("-----------------")
+# print("reciprocal(0)",reciprocal(0))
+# print("-----------------")
+
+'''finally'''
+
+# def reciprocal(n):
+#     try:
+#         n = 1/n
+#     except ZeroDivisionError:
+#         print("ZeroDivisionError")
+#         return n
+#     else:
+#         print("evenrything is fine")
+#         return
+#     finally:
+#         print("its time to exit")
+#         return n
+
+
+# print("-----------------")
+# print("reciprocal(2)",reciprocal(2))
+
+# print("-----------------")
+# print("reciprocal(0)",reciprocal(0))
+# print("-----------------")
+
+
+
+
+# try:
+#     i = int("hello")
+# except Exception as e:
+
+#     print(e)
+#     print(e.__str__())
+
+
+
+'''create ur own exception/using base_keyword'''
+
+# class MyZeroDivisionError(ZeroDivisionError):
+#     pass
+# def do_the_division(mine):
+#     if mine:
+#         raise MyZeroDivisionError("SOME WORSE NEWS")#raise is use to rise an error
+#     else:
+#         raise ZeroDivisionError("some bad news")
+
+# do_the_division(False)
+# do_the_division(True)
+
+'''CLASS CONTAINS  parameter method constructor
+obj = Theclass() ()-> the contructor for creating the obj
+implicit automatically receivie
+self is kis obj pr work ho rha h self obj
+
+'''
+
+'''class varible /static variable wrk with class not with obj'''
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val =1):
+#         self.__first = val
+#         ExampleClass.counter +=1  #class name with counter {static variable ****} 
+
+# example_object_1  = ExampleClass()
+# example_object_2  = ExampleClass(2)
+# example_object_3  = ExampleClass(4)
+
+
+# print(example_object_1.__dict__,example_object_1.counter)
+# print(example_object_2.__dict__,example_object_2.counter)
+# print(example_object_3.__dict__,example_object_3.counter)
+
+
+'''we can put any logic inside our __init__ constructor rather then always intanciation'''
+# class ExampleCls:
+#     counter = 0
+#     def __init__(self,val=1):
+#         #self.__first = val
+#         ExampleCls.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+        
+#         else:
+#             self.b = 1  #get an error for no attribute inside b 
+# example_obj = ExampleCls(1)
+# print(example_obj.a)
+# print(example_obj.b)
+
+'''exception handling try except'''
+# class ExampleCls:
+#     counter = 0
+#     def __init__(self,val=1):
+#         #self.__first = val
+#         ExampleCls.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1  #try with method
+#         else:
+#             self.b = 1  #get an error for no attribute inside b 
+# example_obj = ExampleCls(1)
+# #nested exection try catch 
+# try: 
+#     print("a=",example_obj.a)
+# except AttributeError:
+#     try:
+#         print("b=",example_obj.b)
+#     except AttributeError:
+#        print("Error has occurs!slightly pass it") 
+
+'''hasattr function(2 argumetn to be pas clsname,key/prop) ** checking the property exist inside the obj or not the result in form of true fales'''
+
+# class ExampleCls:
+#     counter = 0
+#     def __init__(self,val=1):
+#         #self.__first = val
+#         ExampleCls.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1  #get an error for no attribute inside b 
+# example_obj = ExampleCls(1)
+
+# if hasattr(example_obj,'a'):
+#     print("a=",example_obj.a)
+# if hasattr(example_obj,'b'):
+#     print("b=",example_obj.b)
+
+
+'''passing class'''
+# class ExampleCls:
+#     counter = 0
+#     def __init__(self,val=1):
+#         #self.__first = val
+#         ExampleCls.counter += 1
+#         if val % 2 != 0:
+#             self.a = 1
+#         else:
+#             self.b = 1  #get an error for no attribute inside b 
+# example_obj = ExampleCls(1)
+# print(example_obj.a)
+# print(example_obj.b)
+
+
+# if hasattr(example_obj,'a'):
+#     print("a=",example_obj.a)
+# if hasattr(example_obj,'b'):
+#     print("b=",example_obj.b)
+
+# print(hasattr(ExampleCls,'b'))
+# print(hasattr(ExampleCls,'a'))
+'''__name for make is hidden'''
+
+# class Python:
+#     population = 1
+#     victims = 0
+#     def __init__(self):
+#         self.length_ft = 3
+#         self.__venomous = False
+
+# myObj = Python()
+# print("myobj.population",myObj.population)
+
+# print("myobj.victims",myObj.victims)
+# print("myobj.length_fr",myObj.length_ft)
+# # print("myobj.__venomous",myObj.__venomous)
+# print("myobj.venomous",myObj.venomous)
+
+'''now accesing the hidden variable __name by using class name '''
+# class Python:
+#     population = 1
+#     victims = 0
+#     def __init__(self):
+#         self.length_ft = 3
+#         self.__venomous = False
+# myObj = Python()
+
+# print("myobj.population",myObj.population)
+# print("myobj.victims",myObj.victims)
+# print("myobj.length_fr",myObj.length_ft)
+# # print("myobj.__venomous",myObj.__venomous)
+# print("myobj.venomous",myObj._python.__venomous)
+
+# class Python:
+#     population = 1
+#     victims = 0
+#     version_2 =2
+#     def __init__(self):
+#         self.length_ft = 3
+#         self.__venomous = False
+
+# myObj = Python()
+# print("myobj.population",myObj.population)
+# print(hasattr(myObj.version_2))#***
+# print("myobj.victims",myObj.victims)
+
+'''abstraction'''
+'''hidden method is also possible (hidden is abstraction)'''
+'''name mangling in methods (accsesing hidden prop)'''
+# class Classy:
+#   def visible(self):
+#     print("visible")
+
+#   def __hidden(SELF):
+#     print("hidden")
+
+# obj =Classy()
+# obj.visible()
+# try:
+#    obj.__hidden()
+# except:
+#   print("failed")
+# obj._Classy__hidden()
+
+# obj = Classy()
+# print(type(obj))
+# '''use to print the main class name'''
+# print(type(obj).__name__)
+
+'''is instance check whether the obj is blongs to the class or not'''
+# class vehicle:
+#     pass
+# class LandVehicle(vehicle):
+#     pass
+# class trackedVechile(LandVehicle):
+#     pass
+# my_vehicle = vehicle()
+# my_land_vehicle = LandVehicle()
+# my_track_vehicle = trackedVechile()
+
+# for obj in [my_vehicle,my_land_vehicle,my_track_vehicle]:
+#     for cls in [vehicle,LandVehicle,trackedVechile]:
+#         print(isinstance(obj,cls),end="\t") #*** check it belongs to the same clss the obj
+#     print()
+
+'''reference check using is'''
+
+# class SampelClass:
+#     def __init__(self,val):
+#         self.val =val
+
+# object_1 = SampelClass(0)
+# object_2 = SampelClass(2)
+# object_3 = object_1
+# object_3.val += 1
+
+# print(object_1 is object_2)
+# print(object_2 is object_3)
+# print(object_3 is object_1)
+# print(object_1.val,object_2.val,object_3.val)
+
+# string_1 = "Mary had a little "
+# string_2 ="Mary had a little lamb"
+# string_1 += "lamb"
+
+# print(string_1 == string_2 , string_1 is string_2)
+
+# city = "Indore"
+# print(city[0])
+# print(city[1])
+
+# print(city[-1])
+# print(city[-5])
+
+# print(city[-3])
+# print(city[3])
+
+'''slicing'''
+
+# name = "Rishu"
+# print(name[0:5])
+# print(name[6:])
+# print(name[:5])
+# print(name[::2])
+# print(name[::-1])
+
+
+# print(len(city))
+# print(len(name))      
+
+'''string methods'''
+
+# text = "   Hello python world!   "
+# # Case
+
+# print(text.upper())
+# print(text.lower())
+# print(text.title()) 
+# print(text.capitalize())
+
+# # Strip Whitespace
+# print(text.strip())
+
+# # Search 
+# print('python' in text)
+# print(text.find('python'))
+# print(text.count('l'))
+
+# '''split and join'''
+
+# csv = "Rishu,22,Indore,Engineer"
+# parts = csv.split(",")
+# print(parts)
+# print(parts[0])
+# rejoined = ' | '.join(parts)
+# print(rejoined)
+
+# # Check content
+# print('hello'.isalpha())
+# print('12345'.isdigit())
+# print('python'.isalpha())
+# print(' '.isspace())
+
+# #start/end check
+# email ='student@example.com'
+# print(email.startswith('student'))
+# print(email.endswith('.com'))
+
+'''special strings at , 62'''
+
+# name, marks, rank = 'Rishu', 92.567, 3
+
+# # Basic
+# print(f'Marks: {marks:.2f}')
+# print(f'Marks: {marks:.0f}')
+# print(f'Count: {1000000:,}')
+
+# #padding padding and alignment
+# print(f'{name:<15}|{marks:>8.2f}|Rank{rank}')
+# #Rishu         |   92.57|Rank3
+
+# #expression inside {}
+# price, gst = 500, 0.18
+# print(f'Total price: {price * (1 + gst):.2f}')
+
+# string = "Hello, How are you doing today?"
+# count = 0
+# for char in string:
+#     if char in "aeiouAEIOU":
+#         count += 1
+# print("vowel count:", count)
+# print(string[15:19])
+# print(string[::-1])
+# non_palin = string != string[::-1]
+# print("Is the string a palindrome?", not non_palin)
+
+# with open("Data.txt", "r") as file:
+#     data = file.read()
+# print(data)
+ 
+'''reading and writing  and updating files'''
+# with open("students.txt", "w") as file:
+#     file.write("Rishuu, 92.5, Indore, Engineer\n")
+#     file.write("Raghav, 88.0, Mumbai, Designer\n")
+#     file.write("Monish, 95.0, Delhi, Developer\n")
+
+# with open("students.txt", "a") as file:
+#     file.write("Isha, 90.0, Bangalore, Analyst\n")
+
+#     with open("students.txt", "r") as file:
+#         data = file.read()
+# print(data)
+
+# with open("students.txt", "r") as file:
+#             for line in file:
+#                 name, score, city, profession = line.strip().split(", ")
+#                 print(f"Name: {name}, Score: {score}, City: {city}, Profession: {profession}")
+#                 print(f"{name} lives in {city} and works as a {profession}.")
+#                 print("-----------------------------")
+
+

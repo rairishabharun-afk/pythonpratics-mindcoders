@@ -1,0 +1,4 @@
+Rishuu, 92.5, Indore, Engineer
+Raghav, 88.0, Mumbai, Designer
+Monish, 95.0, Delhi, Developer
+Isha, 90.0, Bangalore, Analyst
