@@ -1093,3 +1093,34 @@ self is kis obj pr work ho rha h self obj
 #                 print("-----------------------------")
 
 
+    
+
+# import csv 
+
+# records = [
+#     ["Name", "Age", "City", "Grade"],
+#     ["Rishuu", 21, "Indore", "A"],
+#     ["Raghav", 22, "Mumbai", "B"],
+#     ["Monish", 23, "Delhi", "A"]
+# ]
+# with open('students.csv','w',newline='') as f:
+#     csv.writer(f).writerows(records)
+
+# with open('students.csv','r')as f:
+#     for row in csv.DictReader(f):
+#         print(f'{row["Name"]}: {row["Grade"]} marks ({row["City"]})')
+    
+# name = input("Name of the student: ")
+
+# found = False
+
+# with open('students.csv','r')as f:
+#     for row in csv.DictReader(f):
+#         if row["Name"] == name:
+#             print(f'Found {name}')
+#             print(f'{row["Name"]}: {row["Grade"]} marks ({row["City"]})')
+#             found = True
+#             break
+
+# if not found:
+#     print("Student not found!!")
