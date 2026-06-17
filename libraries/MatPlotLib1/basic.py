@@ -50,3 +50,4 @@ plt.title('study hours vs exam marks')
 plt.xlabel('study hours/day')
 plt.ylabel('exam marks')
 plt.show()
+
