@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # #Data
 # months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -34,20 +34,20 @@ import matplotlib.pyplot as plt
 # plt.show()
 
 
-'''scatter plot '''
+# '''scatter plot '''
 
-import numpy as np
+# import numpy as np
 
 # scatter plot - relationship between two variables
-study_hrs = np.random.uniform(2,10,50)
-marks = study_hrs * 7 + np.random.normal(0,8,50)
-marks = np.clip(marks,30,100) 
+# study_hrs = np.random.uniform(2,10,50)
+# marks = study_hrs * 7 + np.random.normal(0,8,50)
+# marks = np.clip(marks,30,100) 
 
-plt.figure(figsize=(8,5))
-plt.scatter(study_hrs, marks, c=marks, cmap='RdYlGn', s=100, alpha=0.8)
-plt.colorbar(label= 'Marks')
-plt.title('study hours vs exam marks')
-plt.xlabel('study hours/day')
-plt.ylabel('exam marks')
-plt.show()
+# plt.figure(figsize=(8,5))
+# plt.scatter(study_hrs, marks, c=marks, cmap='RdYlGn', s=100, alpha=0.8)
+# plt.colorbar(label= 'Marks')
+# plt.title('study hours vs exam marks')
+# plt.xlabel('study hours/day')
+# plt.ylabel('exam marks')
+# plt.show()
 
