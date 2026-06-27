@@ -1,0 +1,42 @@
+import random
+
+jokes = [
+    "Why did the AI go to school? Because it wanted better training data!",
+    "My ML model is like me before exams—overfitting and still confused.",
+    "I told my AI a joke. It said: 'Processing humor... Error 404: Funny not found.'",
+    "Why do data scientists love nature? Because it has the best random forests!",
+    "Machine Learning: Turning coffee into predictions since forever."
+]
+
+memes = [
+    """
+    Student: Train model once
+    AI:
+    Accuracy = 99%
+    Student: 😎
+    Test Accuracy = 45%
+    Student: 💀
+    """,
+    """
+    Me: Just one more epoch
+    GPU: 🔥🔥🔥
+    """,
+    """
+    AI Engineer:
+    print("Hello World")
+
+    LinkedIn:
+    Built a revolutionary AI system 🚀
+    """,
+    """
+    Dataset: Clean me
+    Me: Later
+    Model Accuracy: 12%
+    """
+]
+
+print("😂 AI Joke:")
+print(random.choice(jokes))
+
+print("\n🎭 AI Meme:")
+print(random.choice(memes))
